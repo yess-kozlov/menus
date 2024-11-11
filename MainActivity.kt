@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             popupMenu.menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
-                    R.id.popup_share -> showToast("Share selected")
-                    R.id.popup_save -> showToast("Save selected")
+                    R.id.popup_share -> showToast("Compartido")
+                    R.id.popup_save -> showToast("Guardado")
                 }
                 true
             }
@@ -50,11 +50,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                showToast("Settings selected")
+                showToast("Configuración")
                 true
             }
             R.id.action_about -> {
-                showToast("About selected")
+                showToast("Acerca de la app")
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -71,11 +71,11 @@ class MainActivity : AppCompatActivity() {
     override fun onContextItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.context_edit -> {
-                showToast("Edit selected")
+                showToast("Sección editada")
                 true
             }
             R.id.context_delete -> {
-                showToast("Delete selected")
+                showToast("Sección eliminada")
                 true
             }
             else -> super.onContextItemSelected(item)
